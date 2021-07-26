@@ -5,9 +5,17 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
   Widget build(BuildContext context) {
+    int days = 30;
     return MaterialApp(
-      home: Text("hello!dev this side "),
-    ); //it is an class.
+      home: Material(
+        child: Center(
+          child: Container(child: Text("Welcome in $days of flutter. ")),
+        ),
+      ),
+    );
   }
 }
